@@ -1,0 +1,8 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+COPY ./deploy/run-demo.sh /root
+WORKDIR /root
+RUN chmod +x run-demo.sh
+
+COPY samples /root/samples

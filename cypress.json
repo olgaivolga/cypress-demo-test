@@ -1,0 +1,26 @@
+{
+    "baseUrl": "http://localhost:4444",
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "results/junit.xml"
+    },
+    "ignoreTestFiles": [
+        "**/__snapshots__/*",
+        "**/__image_snapshots__/*"
+    ],
+    "video": true,
+    "videoCompression": 1,
+    "numTestsKeptInMemory": 5,
+    "videoUploadOnPasses": true,
+    "env": {
+      "cypress-plugin-snapshots": {
+        "autopassNewSnapshots": true,
+        "serverEnabled": true,
+        "separator": "_",
+        "imageConfig": {
+          "threshold": 1,
+          "thresholdType": "percent"
+        }
+      }
+    }    
+}
