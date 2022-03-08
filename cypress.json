@@ -9,7 +9,7 @@
         "**/__image_snapshots__/*"
     ],
     "video": true,
-    "videoCompression": 1,
+    "videoCompression": 10,
     "numTestsKeptInMemory": 5,
     "videoUploadOnPasses": true,
     "env": {

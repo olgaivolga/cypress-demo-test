@@ -28,5 +28,7 @@ describe('Basic getUserMedia demo', () => {
             expect(track.readyState).to.equal('ended')
         })
       })
+      // a workaround to get a nice video of the test
+      cy.wait(5000)
     })
 })

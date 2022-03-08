@@ -38,7 +38,7 @@ jobs:
           headless: true
           config: baseUrl=http://127.0.0.1:4444
       - uses: actions/upload-artifact@v2
-        if: always()
+        if: failure()
         with:
           name: screenshots
           path: cypress/screenshots/

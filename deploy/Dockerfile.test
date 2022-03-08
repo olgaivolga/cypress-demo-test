@@ -1,15 +1,6 @@
 ARG DEMO_IMAGE
 FROM ${DEMO_IMAGE}
 
-RUN curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
-RUN apt update && \
-    apt -y --no-install-recommends install \
-        libgtk2.0-0 libgtk-3-0 libgbm-dev \
-        libnotify-dev libgconf-2-4 libnss3 \
-        libxss1 libasound2 libxtst6 xauth xvfb \
-        google-chrome-stable
-
 COPY package.json /root
 COPY package-lock.json /root
 RUN npm ci

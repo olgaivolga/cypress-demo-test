@@ -22,3 +22,10 @@ ci_cypress:
 
 run_app:
 	docker run -it --rm -p 4444:4444 demo-test:${BRANCH} ./run-demo.sh
+
+
+ci_build_test_api:
+	docker build --build-arg BASE_IMAGE=olgaivolga/demo-base:${BRANCH} -t test-api:${BRANCH} -f ./deploy/Dockerfile.test.api .
+
+run_api_mock_server:
+	docker run -it --rm -p 5000:5000 test-api:${BRANCH} /bin/bash
