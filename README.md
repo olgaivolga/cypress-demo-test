@@ -2,7 +2,8 @@
 
 1. See [GitHub Actions](https://github.com/olgaivolga/demo-test/actions/runs/1950748572) for the videos of the run.
 
-- Pick a run and scroll down to Artifacts section
+- Scroll down to Artifacts section
+- Download videos
 
 2. Alternatively tests can be run locally using Docker
 
